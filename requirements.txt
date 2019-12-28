@@ -1,0 +1,4 @@
+
+1. create virtualenvironment
+pip3 install virtualenv
+create virtualenv venv
