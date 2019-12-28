@@ -1,4 +1,4 @@
-#!/home/codechemist/Ashraful/SodaiShop/evnv/bin/python
+#!/home/codechemist/Ashraful/SodaiShop/venv/bin/python
 
 import sys
 import getopt

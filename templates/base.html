@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{%block title %}Welcome to base page{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <h2>Sodai Online Shop</h2>
+        </div>
+        <div class="navAndSearch">
+            <a href="">SignUp</a>
+            <a href="">login</a>
+        </div>
+    </div>
+    
+    {% block content%}
+   <h1>Pinic</h1>
+   
+    {% endblock content %}
+</body>
+</html>
