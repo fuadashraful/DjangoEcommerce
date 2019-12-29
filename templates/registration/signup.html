@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block content%}
+<h2>Sign Up to Ecommerce</h2>
+ 
+
+ 
+  <div class="userform">
+      <form class="form-group" method="post">
+       {% csrf_token %}
+     
+         {% for field in form %}
+         <label>{{ field.label }}</label> <br>
+            {{ field }} <br>
+
+         {% endfor %}
+
+ 
+   <input class="btn btn-outline-info" type="submit" value="Sign Up" name="signup"> 
+   
+      </form>
+  </div>
+
+{% endblock content %}

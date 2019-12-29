@@ -4,6 +4,7 @@ from . import views as userViews
 urlpatterns = [
  
     path('',userViews.HomeView,name="home") ,
+    path('signup/',userViews.SignUp,name="signup"),
 ]
 
 

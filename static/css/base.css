@@ -1,5 +1,81 @@
+/*  general  */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300i,400,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-body
-{
-    color: red;
-}
+/*google font */
+body {
+  font-size: 62.5%; }
+
+ul {
+  list-style-type: none; }
+
+.fb {
+  background-color: #4267B2; }
+
+.instagram {
+  background-color: #D1004F; }
+
+.twitter {
+  background-color: #1C9CEA; }
+
+/* end general   */
+/* nav and search bar*/
+.navbarAndSearch {
+  font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
+  background: #f6412d;
+  background: linear-gradient(#f6412d, rgba(253, 97, 50, 0.7));
+  width: 100%;
+  overflow: hidden;
+  /* left ul of navbar*/
+  /* right ul of navbar*/ }
+  .navbarAndSearch .left-ul {
+    float: left; }
+    .navbarAndSearch .left-ul li {
+      display: inline-block;
+      font-size: 1.4em;
+      text-transform: capitalize;
+      padding: 0 10px; }
+      .navbarAndSearch .left-ul li a {
+        color: #fff; }
+    .navbarAndSearch .left-ul .social-links {
+      font-size: 1.5em;
+      padding: 3px 10px;
+      border-radius: 10%; }
+    .navbarAndSearch .left-ul li:nth-child(1), .navbarAndSearch .left-ul li:nth-child(2) {
+      border-right: 1px solid #fff; }
+  .navbarAndSearch .right-ul {
+    float: right;
+    margin-right: 20px; }
+    .navbarAndSearch .right-ul li {
+      display: inline-block;
+      font-size: 1.4em;
+      text-transform: capitalize;
+      padding: 0 10px;
+      border-right: 1px solid #fff; }
+      .navbarAndSearch .right-ul li a {
+        color: #fff; }
+      .navbarAndSearch .right-ul li i {
+        margin-right: 3px; }
+    .navbarAndSearch .right-ul li:last-child {
+      border-right: none; }
+
+/*End  nav and search bar*/
+/*  Responsive design */
+@media only screen and (max-width: 768px) {
+  .navbarAndSearch .left-ul li {
+    font-size: 1.6em;
+    padding-top: 10px; }
+    .navbarAndSearch .left-ul li .social-links {
+      font-size: 1.2em;
+      padding: 3px 10px;
+      border-radius: 10%; }
+  .navbarAndSearch .left-ul li:first-child {
+    margin-left: 0; }
+  .navbarAndSearch .right-ul li {
+    padding-top: 10px; } }
+
+/*# sourceMappingURL=base.css.map */

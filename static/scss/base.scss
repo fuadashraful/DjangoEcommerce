@@ -1,0 +1,134 @@
+/*  general  */
+*
+{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+/*google font */ 
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300i,400,600&display=swap');
+body
+{
+    font-size: 62.5%;
+}
+ul
+{
+    list-style-type: none;
+}
+.fb{background-color:#4267B2;}
+.instagram{background-color: #D1004F;}
+.twitter{background-color: #1C9CEA;}
+/* end general   */
+
+ /* nav and search bar*/ 
+.navbarAndSearch
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    background:rgba(246,65,45,1);
+    background: linear-gradient(rgba(246,65,45,1),rgba(253, 97, 50,0.7));
+     
+    width: 100%;
+    overflow: hidden;
+  /* left ul of navbar*/ 
+    .left-ul
+    {
+        float: left;
+        li
+        {
+            display: inline-block;
+           
+            font-size: 1.4em;
+            text-transform: capitalize;
+            padding: 0 10px;
+            a
+            {
+                color: #fff;
+            }
+        }
+        .social-links
+        {
+            font-size: 1.5em;
+            padding: 3px 10px;
+            border-radius: 10%;
+
+        }
+        li:nth-child(1),li:nth-child(2) 
+        {
+            border-right: 1px solid #fff;
+        }
+    }
+ /* right ul of navbar*/ 
+    .right-ul
+    {
+        float: right;
+        margin-right: 20px;
+        
+        li
+        {
+            display: inline-block;
+            font-size: 1.4em;
+            text-transform: capitalize;
+            padding: 0 10px;
+            a{
+                color: #fff;
+            }
+            border-right: 1px solid #fff;
+            i
+            {
+                margin-right: 3px;
+            }
+        }
+        li:last-child
+        {
+            border-right: none;
+        }
+
+    }
+ 
+}
+ /*End  nav and search bar*/ 
+
+
+
+
+
+
+
+/*  Responsive design */
+
+@media only screen and(max-width:768px)
+{
+   .navbarAndSearch
+   {
+    .left-ul
+    {
+        li
+        {
+            font-size: 1.6em;
+            padding-top: 10px;
+            .social-links
+            {
+                font-size: 1.2em;
+                padding: 3px 10px;
+                border-radius: 10%;
+
+            }
+            
+            
+        }
+        li:first-child
+        {
+            margin-left: 0;
+        }
+    }
+    
+    .right-ul
+    {
+        li
+        {
+            padding-top: 10px;
+        }
+    }
+   } 
+}
