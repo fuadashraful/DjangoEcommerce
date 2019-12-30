@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+
+{% block content%}
+ 
+{% for list in offerlist %}
+     {{ list.offerName }}
+    <img src="{{  list.offerImage.url  }}"   > 
+{% endfor %}
+
+{% endblock content %}

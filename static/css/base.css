@@ -21,6 +21,21 @@ ul {
 .twitter {
   background-color: #1C9CEA; }
 
+.section {
+  clear: both;
+  padding: 0;
+  margin: 0; }
+
+.group:before, .group:after {
+  content: "";
+  display: table; }
+
+.group:after {
+  clear: both; }
+
+.group {
+  zoom: 1; }
+
 /* end general   */
 /* nav and search bar*/
 .navbarAndSearch {
@@ -63,6 +78,39 @@ ul {
     .navbarAndSearch .right-ul li:last-child {
       border-right: none; }
 
+/*start logo and search */
+.logo, .searchbar {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%; }
+
+.logo {
+  margin-left: 0;
+  width: 32.26%; }
+  .logo h2 {
+    font-size: 5em; }
+    .logo h2 a {
+      color: #089c08; }
+  .logo span {
+    font-size: 2em; }
+
+.searchbar {
+  width: 66.13%; }
+  .searchbar input {
+    width: 80%;
+    float: left;
+    border: none;
+    height: 50px;
+    font-size: 1.6em; }
+  .searchbar a {
+    display: inline-block;
+    height: 50px;
+    margin-left: -50px;
+    margin-top: 5px;
+    font-size: 3em;
+    color: #f6412d;
+    text-align: center; }
+
 /*End  nav and search bar*/
 /*  Responsive design */
 @media only screen and (max-width: 768px) {
@@ -77,5 +125,30 @@ ul {
     margin-left: 0; }
   .navbarAndSearch .right-ul li {
     padding-top: 10px; } }
+/* searchbar and logo media queries*/
+@media only screen and (max-width: 700px) {
+  .logo, .searchbar {
+    margin: 1% 0 1% 0;
+    width: 100%; }
+
+  .logo h2 {
+    font-size: 4em; }
+  .logo span {
+    font-size: 1.4em; }
+
+  .searchbar {
+    margin-top: 5px; }
+    .searchbar input {
+      font-size: 1.2em; }
+    .searchbar a {
+      font-size: 2em;
+      margin-left: -40px; } }
+/* end navbar and searchbar */
+.footer {
+  background: #ce493a;
+  height: 50px;
+  text-align: center;
+  font-size: 2em;
+  color: #fff; }
 
 /*# sourceMappingURL=base.css.map */

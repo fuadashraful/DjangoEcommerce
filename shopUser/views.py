@@ -2,12 +2,14 @@ from django.shortcuts import render,redirect
 from django.views.generic import TemplateView
 from .forms import SignUpForm
 from django.contrib import messages
+from .models import CurrentOffer
 # Create your views here.
 
 
 
 
 def HomeView(request):
+
     return render(request,'base.html')
 
 
@@ -29,3 +31,12 @@ def SignUp(request):
         form=SignUpForm()
         context["form"]=form
     return render(request,'registration/signup.html',context)
+
+
+def OfferView(request):
+
+    if request.method=="GET":
+        offerlist=CurrentOffer.objects.all()
+        context={}
+        context["offerlist"]=offerlist
+        return render(request,'offers.html',context)

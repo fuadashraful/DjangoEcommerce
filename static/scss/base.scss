@@ -18,6 +18,26 @@ ul
 .fb{background-color:#4267B2;}
 .instagram{background-color: #D1004F;}
 .twitter{background-color: #1C9CEA;}
+
+.section
+{
+    clear: both;
+    padding: 0;
+    margin: 0;
+}
+.group:before,.group:after
+{
+ content: "";
+ display: table;
+}
+.group:after
+{
+    clear: both;
+}
+.group
+{
+    zoom: 1;
+}
 /* end general   */
 
  /* nav and search bar*/ 
@@ -87,6 +107,56 @@ ul
     }
  
 }
+
+/*start logo and search */
+
+.logo,.searchbar
+{
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+     
+}
+.logo
+{
+    
+    h2
+    {
+        font-size: 5em;
+        a{
+            color: rgb(8, 156, 8);
+        }
+    }
+    span
+    {
+        font-size: 2em;
+    }
+    margin-left: 0;
+    width: 32.26%;
+}
+.searchbar
+{
+    width: 66.13%;
+    input
+    {
+        width: 80%;
+        float: left;
+        border: none;
+        height: 50px;
+        font-size: 1.6em;
+    }
+    a{
+        display: inline-block;
+        height: 50px;
+        margin-left: -50px;
+        margin-top: 5px;
+        font-size: 3em;
+        color: rgba(246,65,45,1);
+       
+        text-align: center;
+    }
+}
+ 
  /*End  nav and search bar*/ 
 
 
@@ -131,4 +201,53 @@ ul
         }
     }
    } 
+}
+/* searchbar and logo media queries*/ 
+
+@media only screen and (max-width:700px)
+{
+    .logo,.searchbar
+    {
+        margin: 1% 0 1% 0;
+        width: 100%;
+    }
+    .logo
+    {
+        h2
+        {
+            font-size: 4em;
+        }
+        span
+        {
+            font-size: 1.4em;
+        }
+
+    }
+    .searchbar
+    {
+        margin-top: 5px;
+        input
+        {
+            font-size: 1.2em;
+        }
+        a{
+            font-size: 2em;
+            margin-left: -40px;
+        }
+    }
+}
+
+
+/* end navbar and searchbar */
+
+
+
+
+.footer
+{
+    background: rgb(206, 73, 58);
+    height: 50px;
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
 }

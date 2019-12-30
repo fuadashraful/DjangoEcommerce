@@ -1,15 +1,8 @@
-// All rights reserved bu codeChemist ,Developer : Fuad Ashraful Mehmet
-1. create virtualenvironment
 pip3 install virtualenv
-create virtualenv venv
-
-2. installing django3
 pip3 install Django==3.0.1
-
+pip3 install Pillow
 3.superuser
 user: sodaiadmin
 pass:sodaiadmin
 email:sodaiadmin@gmail.com
 
-4. git add modified
-git ls-files --modified | xargs git add
