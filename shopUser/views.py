@@ -9,8 +9,11 @@ from .models import CurrentOffer
 
 
 def HomeView(request):
-
-    return render(request,'base.html')
+    offerlist=CurrentOffer.objects.all()
+    context={}
+    context["offerlist"]=offerlist
+    
+    return render(request,'base.html',context)
 
 
 

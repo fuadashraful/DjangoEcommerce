@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- fontawsome cdn -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="{% static 'vendorCss/slick.css'%}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {%block CSS %}
     {% endblock CSS%}
@@ -47,11 +47,24 @@
     
     </div>
 
-
+<!--  Carousal block -->
     {%block Carousal%}
+    <div class="carousal-slide">
+
+        {% for offer in offerlist %}
+        <div class="single-slide" style=" background-image:url(..{{offer.offerImage.url}} );">
+            <div class="inner-text">
+                <h1>{{offer.offerName}}</h1>
+                <h3>Now {{offer.percentage }}% off</h3>
+                <p>this is simple description</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
     {% endblock Carousal %}
     
+    <!-- Main content block -->
     {% block content%}
    <h1>This is base page </h1>
    
@@ -69,5 +82,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!--ion-icon cdn-->
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- Carousal JS -->
+    <script src="{% static 'vendorJs/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'vendorJs/slick.min.js' %}"></script>
+    <script src="{% static 'js/base.js' %}"></script>
+
+    {%block JS %}{% endblock JS%}
 </body>
 </html>

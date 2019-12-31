@@ -143,6 +143,81 @@ ul {
     .searchbar a {
       font-size: 2em;
       margin-left: -40px; } }
+/*Carousal slide Css */
+.carousal-slide {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  background: pink;
+  box-sizing: border-box; }
+
+.single-slide {
+  height: 500px;
+  position: relative;
+  font-family: 'Source Sans Pro', sans-serif;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%; }
+
+.inner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f0f012;
+  font-weight: 800;
+  text-align: center; }
+
+.slick-dots {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  z-index: 99;
+  transform: translateX(-50%); }
+
+.slick-dots li {
+  display: inline-block;
+  margin-left: 5px; }
+
+.slick-dots li:first-child {
+  margin-left: 0; }
+
+.slick-dots li button {
+  border: none;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  font-size: 8px; }
+
+.slick-dots li.slick-active button {
+  background: green;
+  color: #fff;
+  height: 15px;
+  width: 15px; }
+
+.slick-prev {
+  position: absolute;
+  top: 45%;
+  z-index: 10;
+  left: 5%;
+  padding: 10px; }
+
+.slick-next {
+  position: absolute;
+  top: 45%;
+  z-index: 10;
+  right: 5%;
+  padding: 10px; }
+
+.slick-next, .slick-prev {
+  border: none;
+  border-radius: 50%; }
+
+.slick-next:hover, .slick-prev:hover {
+  background: #666;
+  color: #fff; }
+
 /* end navbar and searchbar */
 .footer {
   background: #ce493a;
