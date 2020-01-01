@@ -4,8 +4,8 @@ from . import views as userViews
 from django.conf import settings 
 from django.conf.urls.static import static 
 urlpatterns = [
- 
-    path('',userViews.HomeView,name="home") ,
+    #default url is 'sodai/'
+    path('home/',userViews.HomeView,name="home") ,
     path('signup/',userViews.SignUp,name="signup"),
     path('offers/',userViews.OfferView,name="offers"),
 ]

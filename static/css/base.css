@@ -55,7 +55,8 @@ ul {
       text-transform: capitalize;
       padding: 0 10px; }
       .navbarAndSearch .left-ul li a {
-        color: #fff; }
+        color: #fff;
+        text-decoration: none; }
     .navbarAndSearch .left-ul .social-links {
       font-size: 1.5em;
       padding: 3px 10px;
@@ -72,7 +73,8 @@ ul {
       padding: 0 10px;
       border-right: 1px solid #fff; }
       .navbarAndSearch .right-ul li a {
-        color: #fff; }
+        color: #fff;
+        text-decoration: none; }
       .navbarAndSearch .right-ul li i {
         margin-right: 3px; }
     .navbarAndSearch .right-ul li:last-child {
@@ -87,10 +89,13 @@ ul {
 .logo {
   margin-left: 0;
   width: 32.26%; }
-  .logo h2 {
-    font-size: 5em; }
-    .logo h2 a {
-      color: #089c08; }
+  .logo a {
+    font-size: 5em;
+    color: #089c08;
+    text-decoration: none;
+    display: block; }
+  .logo a:hover {
+    font-size: 5.3em; }
   .logo span {
     font-size: 2em; }
 
@@ -112,6 +117,58 @@ ul {
     text-align: center; }
 
 /*End  nav and search bar*/
+/* Categories design*/
+.categories {
+  position: relative;
+  overflow: hidden;
+  font-family: 'Source Sans Pro', sans-serif; }
+  .categories .category-header {
+    background: #e5e5e0;
+    width: 80%;
+    margin: 0 auto;
+    color: #302e2e;
+    padding: 10px 0; }
+    .categories .category-header h3 {
+      text-align: center; }
+      .categories .category-header h3 i {
+        margin-right: 10px; }
+  .categories .imageAndDesc {
+    width: 95%;
+    margin: 10px auto;
+    background: #e5e5e0; }
+    .categories .imageAndDesc .item {
+      position: relative;
+      margin: 10px 2%;
+      float: left;
+      display: block;
+      margin: 1% 0 1% 1.6%;
+      width: 23%;
+      height: 200px;
+      text-align: center;
+      overflow: hidden; }
+      .categories .imageAndDesc .item #categoyImg {
+        width: 110%;
+        height: 150px; }
+      .categories .imageAndDesc .item a {
+        font-size: 1.6em;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #f9634a;
+        text-decoration: none; }
+    .categories .imageAndDesc .item:hover {
+      box-shadow: 0 0 11px #f9634a;
+      font-size: 1.7em;
+      transform: ease 0.5s; }
+
+/*Categories media queries*/
+@media only screen and (max-width: 480px) {
+  .categories .imageAndDesc .item {
+    width: 100%;
+    margin: 3% 0 1% 0;
+    height: 180px; } }
+@media only screen and (max-width: 768px) {
+  .categories .imageAndDesc .item {
+    margin: 2% 0 1% 2%;
+    height: 180px; } }
 /*  Responsive design */
 @media only screen and (max-width: 768px) {
   .navbarAndSearch .left-ul li {
@@ -131,7 +188,7 @@ ul {
     margin: 1% 0 1% 0;
     width: 100%; }
 
-  .logo h2 {
+  .logo a {
     font-size: 4em; }
   .logo span {
     font-size: 1.4em; }

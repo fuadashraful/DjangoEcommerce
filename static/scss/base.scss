@@ -64,6 +64,7 @@ ul
             a
             {
                 color: #fff;
+                text-decoration: none;
             }
         }
         .social-links
@@ -92,6 +93,7 @@ ul
             padding: 0 10px;
             a{
                 color: #fff;
+                text-decoration: none;
             }
             border-right: 1px solid #fff;
             i
@@ -120,12 +122,17 @@ ul
 .logo
 {
     
-    h2
-    {
-        font-size: 5em;
+   
         a{
+             font-size: 5em;
             color: rgb(8, 156, 8);
+            text-decoration: none;
+            display: block;
         }
+    
+    a:hover
+    {
+        font-size: 5.3em;
     }
     span
     {
@@ -160,6 +167,115 @@ ul
  /*End  nav and search bar*/ 
 
 
+/* Categories design*/
+ 
+.categories
+{
+    position: relative;
+    overflow: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+    .category-header
+    {
+        background: rgba(229, 229, 224, 1.0);
+        width: 80%;
+        margin: 0 auto;
+        color: rgb(48, 46, 46);
+        padding: 10px 0;
+     h3
+    {
+        text-align: center;
+       i
+       {
+           margin-right: 10px;
+       }
+    }      
+    }
+
+
+
+
+    .imageAndDesc
+    {
+      width: 95%;
+      margin: 10px auto;
+      background: rgba(229, 229, 224, 1.0);
+      .item
+      {
+          position: relative;
+          margin: 10px 2%;
+          float: left;
+          display: block;
+          margin: 1% 0 1% 1.6%;
+          width: 23%;
+          height: 200px;
+          text-align: center;
+          overflow: hidden;
+          #categoyImg
+          {
+              
+              width:110%;
+              height: 150px;
+          }
+
+          a
+          {
+              font-size: 1.6em;
+              font-family: 'Source Sans Pro', sans-serif;
+              color: rgba(249, 99, 74, 1.0);
+              text-decoration: none;
+          }
+      }
+
+      
+      .item:hover
+      {
+        box-shadow: 0 0 11px rgba(249, 99, 74, 1.0);
+        font-size: 1.7em;
+        transform:ease 0.5s;
+      }
+      
+    }
+ 
+
+}
+
+
+/*Categories media queries*/ 
+@media only screen and (max-width:480px)
+{
+    .categories
+    {
+        .imageAndDesc
+        {
+            
+            .item
+            {
+                width: 100%;
+                margin: 3% 0 1% 0;
+                height: 180px;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width:768px)
+{
+    .categories
+    {
+        .imageAndDesc
+        {
+            
+            .item
+            {
+                 
+                margin: 2% 0 1% 2%;
+                height: 180px;
+            }
+        }
+    }
+
+}
 
 
 
@@ -213,7 +329,7 @@ ul
     }
     .logo
     {
-        h2
+       a
         {
             font-size: 4em;
         }

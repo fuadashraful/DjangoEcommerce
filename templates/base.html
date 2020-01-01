@@ -36,7 +36,7 @@
 
      <div class="section group" style="margin-left: 50px;">
          <div class="logo">
-             <h2><a href="#">সদাই</a></h2>
+              <a href="#">সদাই</a> 
              <span>তৃতীয় পক্ষের কোন হস্তক্ষেপ নাই</span> 
          </div>
          <div class="searchbar">
@@ -62,12 +62,30 @@
         {% endfor %}
     </div>
 
-    {% endblock Carousal %}
+    {%endblock Carousal%}
+
+    <!-- Categoies -->
     
     <!-- Main content block -->
+
+
     {% block content%}
-   <h1>This is base page </h1>
-   
+     <div class="categories ">
+         <div class="category-header section group my-3 card">
+             <h3 class="card-text"><i class="fa fa-list "></i>Categories</h3>
+         </div>
+         <div class="imageAndDesc section group">
+            {%for category in categorylist %}
+            <div class="item card">
+                 <img src="..{{category.categoryImage.url}}" id="categoyImg"> 
+                 <a href="#" class="card-text mt-2">{{category.name}}</a>
+ 
+            </div>
+            {% endfor %}
+
+         </div>
+     </div>
+     
     {% endblock content %}
 
 

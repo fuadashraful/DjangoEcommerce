@@ -2,17 +2,18 @@ from django.shortcuts import render,redirect
 from django.views.generic import TemplateView
 from .forms import SignUpForm
 from django.contrib import messages
-from .models import CurrentOffer
+from .models import CurrentOffer,Category
 # Create your views here.
 
 
 
 
 def HomeView(request):
-    offerlist=CurrentOffer.objects.all()
     context={}
+    offerlist=CurrentOffer.objects.all()
+    categorylist=Category.objects.all()
     context["offerlist"]=offerlist
-    
+    context["categorylist"]=categorylist
     return render(request,'base.html',context)
 
 
