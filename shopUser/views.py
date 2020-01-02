@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.views.generic import TemplateView
 from .forms import SignUpForm
-from django.contrib import messages
+from django.contrib import messages,auth
 from .models import CurrentOffer,Category
 # Create your views here.
 
@@ -15,8 +15,12 @@ def HomeView(request):
     context["offerlist"]=offerlist
     context["categorylist"]=categorylist
     return render(request,'base.html',context)
+     
 
-
+def logout(request):
+    auth.logout(request)
+    messages.success(request, 'You have successfully logged out')
+    return redirect('home')
 
 def SignUp(request):
     context={}
@@ -26,6 +30,9 @@ def SignUp(request):
         if form.is_valid():
             user=form.save(commit=False)
             user.save()
+            user = auth.authenticate(username=request.POST.get('username'),password=request.POST.get('password1'))
+            if user:
+                auth.login(request, user)
             messages.success(request,"User Saved")
             return redirect('home')
         else:

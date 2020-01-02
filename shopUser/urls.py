@@ -8,6 +8,7 @@ urlpatterns = [
     path('home/',userViews.HomeView,name="home") ,
     path('signup/',userViews.SignUp,name="signup"),
     path('offers/',userViews.OfferView,name="offers"),
+    path('logout/',userViews.logout,name="logout"),
 ]
 
 if settings.DEBUG: 
