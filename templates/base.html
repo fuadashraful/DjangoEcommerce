@@ -8,7 +8,7 @@
     <title>{%block title %}Shodai Online Shop {% endblock title %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- fontawsome cdn -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="{% static 'vendorCss/slick.css'%}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {%block CSS %}
@@ -21,20 +21,20 @@
          <ul class="left-ul">
              <li><a href="#">Seller Center</a></li>
              <li><a href="#">Follow us on </a> </li>
-             <li><a class="social-links fb" href="#"><i class="fa fa-facebook"></i></a></li>
-             <li><a class="social-links instagram" href="#"><i class="fa fa-instagram"></i></a></li>
-             <li><a class="social-links twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+             <li><a class="social-links fb" href="#"><i class="fab fa-facebook-f"></i></a></li>
+             <li><a class="social-links instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+             <li><a class="social-links twitter" href="#"><i class="fab fa-twitter"></i></a></li>
          </ul>
 
          <ul class="right-ul">
             <li><a href="#"><i class="fa fa-bell"></i>Notification</a></li>
             <li><a href="#"><i class="fa fa-question"></i>Help</a></li>
             {% if user.is_authenticated %}
-            <li><a href=""><i class="fa fa-user"></i>{{user.username}}</a></li>
-            <li><a href="{% url 'logout' %}"><i class="far fa-sign-out-alt"></i>Logout</a></li>
+            <li><a href="#"><i class="fa fa-user"></i>{{user.username}}</a></li>
+            <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
             {%else %}
             <li><a href="{% url 'signup'%}"><i class="fa fa-user-plus"></i>Sign Up</a></li>
-            <li><a href="#"><i class="fa fa-user"></i>Login</a></li>
+            <li><a href="{% url 'login'%}"><i class="fa fa-user"></i>Login</a></li>
             {% endif %}
              
          </ul>
@@ -42,7 +42,7 @@
 
      <div class="section group" style="margin-left: 50px;">
          <div class="logo">
-              <a href="#">সদাই</a> 
+              <a href="{% url 'home'%}">সদাই</a> 
              <span>তৃতীয় পক্ষের কোন হস্তক্ষেপ নাই</span> 
          </div>
          <div class="searchbar">

@@ -1,0 +1,64 @@
+/***   reusable part   **/
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px; }
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%; }
+
+.col:first-child {
+  margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+  content: "";
+  display: table; }
+
+.group:after {
+  clear: both; }
+
+.group {
+  zoom: 1;
+  /* For IE 6/7 */ }
+
+.form {
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 40%;
+  margin: 0 auto;
+  height: 400px;
+  background: #ff5b52;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  color: #fff; }
+  .form h2 {
+    margin-bottom: 3rem; }
+  .form input {
+    margin-bottom: .5rem;
+    height: 30px;
+    border: none;
+    margin-left: auto;
+    width: 60%;
+    font-size: 16px; }
+  .form button {
+    display: inline-block;
+    height: 30px;
+    width: 60px;
+    border: none;
+    font-size: 16px; }
+  .form label {
+    font-size: 16px; }
+  .form button:hover {
+    background: #fff;
+    color: #ff5b52; }
+
+@media only screen and (max-width: 700px) {
+  .form input {
+    width: 100%; } }
+
+/*# sourceMappingURL=login.css.map */

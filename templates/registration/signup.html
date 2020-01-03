@@ -1,25 +1,39 @@
 {% extends 'base.html' %}
 {% load static %}
- 
+
+{%block CSS %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+{% endblock CSS%}
+
 {% block content%}
-<h2>Sign Up to Ecommerce</h2>
- 
 
- 
-  <div class="userform">
+
+<div class="container jumbotron mt-4">
+    
+  <div class="signup">
+    <div class="heading">
+      <ul>
+        <li id="user-icon"><i class="fas fa-user-plus"></i></li>
+        <li><h2>Sign Up to Sodai</h2></li>
+      </ul>
+    </div>
+
+
+
+    <div class="signup-form">
       <form class="form-group" method="post">
-       {% csrf_token %}
+        {% csrf_token %}
      
-         {% for field in form %}
-         <label>{{ field.label }}</label> <br>
-            {{ field }} <br>
-            
-         {% endfor %}
-
- 
-   <input  type="submit" value="Sign Up" name="signup"> 
-   
+        {% for field in form %}
+        <label>{{ field.label }}</label> <br>
+           {{ field }} <br>  
+        {% endfor %}
+        <input id="submitBtn"  type="submit" value="Sign Now" name="signup"> 
       </form>
-  </div>
+    </div>
 
+  </div>
+</div>
+ 
+ 
 {% endblock content %}

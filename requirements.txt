@@ -11,3 +11,5 @@ user: sodaiadmin
 pass:sodaiadmin
 email:sodaiadmin@gmail.com
 
+Angolina
+ina@gm12

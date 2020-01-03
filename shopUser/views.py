@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.views.generic import TemplateView
-from .forms import SignUpForm
+from .forms import SignUpForm,UserLoginForm
 from django.contrib import messages,auth
 from .models import CurrentOffer,Category
 # Create your views here.
@@ -22,6 +22,31 @@ def logout(request):
     messages.success(request, 'You have successfully logged out')
     return redirect('home')
 
+def loginView(request):
+
+    context={}
+
+    if request.method=="POST":
+        user_form=UserLoginForm(request.POST)
+ 
+        if user_form.is_valid():
+            user=auth.authenticate(username=request.POST['username_or_email'],password=request.POST['password'])
+
+            if user:
+                auth.login(request,user)
+                messages.success(request, "You have successfully logged in")
+                return redirect('home')
+            else:
+                messages.error(request,"Your input data is not correct")
+
+         
+    else:
+        user_form=UserLoginForm()
+    
+    context['userform']=user_form
+
+    return render(request,'registration/login.html',context) 
+
 def SignUp(request):
     context={}
 
@@ -41,6 +66,7 @@ def SignUp(request):
     else:
         form=SignUpForm()
         context["form"]=form
+
     return render(request,'registration/signup.html',context)
 
 

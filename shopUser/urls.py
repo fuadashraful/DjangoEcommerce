@@ -9,6 +9,7 @@ urlpatterns = [
     path('signup/',userViews.SignUp,name="signup"),
     path('offers/',userViews.OfferView,name="offers"),
     path('logout/',userViews.logout,name="logout"),
+    path('login/',userViews.loginView,name="login"),
 ]
 
 if settings.DEBUG: 

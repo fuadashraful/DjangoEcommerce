@@ -32,3 +32,11 @@ class SignUpForm(UserCreationForm):
             raise ValidationError("Passwords do not match")
 
         return password2
+
+
+class UserLoginForm(forms.Form):
+    '''
+    this form use for login account
+    '''
+    username_or_email=forms.CharField()
+    password= forms.CharField(widget=forms.PasswordInput)

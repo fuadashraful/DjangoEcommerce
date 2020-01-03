@@ -1,0 +1,59 @@
+.signup {
+  position: relative;
+  overflow: hidden;
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 50%;
+  background: #fc7f60;
+  margin: 5px auto;
+  text-align: center;
+  border-radius: 5px;
+  color: #f3f3f3;
+  -webkit-box-shadow: -6px -6px 5px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -6px -6px 5px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -6px -6px 5px -1px rgba(0, 0, 0, 0.75); }
+  .signup .heading {
+    overflow: hidden; }
+    .signup .heading ul {
+      margin-top: 5px; }
+    .signup .heading #user-icon {
+      font-size: 4em; }
+  .signup .signup-form {
+    margin-top: 5px;
+    overflow: hidden; }
+    .signup .signup-form form {
+      background: inherit;
+      font-size: 1.6em; }
+      .signup .signup-form form label {
+        border: none;
+        margin-top: 4px; }
+      .signup .signup-form form input {
+        border: none;
+        width: 50%;
+        height: 30px;
+        border-radius: 5px;
+        -webkit-box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.75); }
+      .signup .signup-form form #submitBtn {
+        margin-top: 8px;
+        display: inline-block;
+        width: 80px;
+        height: 50px;
+        padding: 10px;
+        color: #fc7f60; }
+      .signup .signup-form form #submitBtn:hover {
+        background: #fc7f60;
+        color: #3d3a3a; }
+
+/*responsive design part*/
+@media only screen and (max-width: 1000px) {
+  .signup {
+    width: 70%; } }
+@media only screen and (max-width: 600px) {
+  .signup {
+    width: 100%; }
+
+  .signup-form input {
+    width: 100%; } }
+
+/*# sourceMappingURL=signup.css.map */
