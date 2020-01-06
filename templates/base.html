@@ -43,7 +43,7 @@
      <div class="section group" style="margin-left: 50px;">
          <div class="logo">
               <a href="{% url 'home'%}">সদাই</a> 
-             <span>তৃতীয় পক্ষের কোন হস্তক্ষেপ নাই</span> 
+             <span>তৃতীয় পক্ষের হস্তক্ষেপ নাই</span> 
          </div>
          <div class="searchbar">
             <input class="form-group" type="text" placeholder="Search Products , Seller ,favourites">
@@ -70,10 +70,26 @@
 
     {%endblock Carousal%}
 
-    <!-- Categoies -->
-    
-    <!-- Main content block -->
 
+    <!-- Cart section -->
+    <div class="cart-section">
+        <div class="group section cart-box">
+
+        </div>
+    </div>
+    <div class="cart-button group section">
+         
+       <div class="col one_of_two">
+           <button class="bag-btn" id="IdBag"><i class="fa fa-cart-plus"></i> Bag</button>
+       </div>
+       <div class="col one_of_two">
+          <button class="clearBag-bag"><i class="far fa-trash-alt"></i> clear</button> 
+       </div>
+    </div>
+    <!-- Cart section end -->
+
+    <!-- Categoies --> 
+    <!-- Main content block -->
 
     {% block content%}
      <div class="categories ">
@@ -101,13 +117,13 @@
     </div>
 
     <!-- bootstrap js  -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!--ion-icon cdn-->
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <!-- Carousal JS -->
-    <script src="{% static 'vendorJs/jquery-1.12.4.min.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{% static 'vendorJs/slick.min.js' %}"></script>
     <script src="{% static 'js/base.js' %}"></script>
 

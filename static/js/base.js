@@ -15,10 +15,16 @@ $(document).ready(function(){
         focusOnSelect: true,
     });
 
-
-
 $(".slick-prev").html("<i class='fa fa-arrow-left'></i>");
 $(".slick-next").html("<i class='fa fa-arrow-right'></i>");
+
+
+/***** cart section ****************/ 
+$('.cart-section').hide();
+$('#IdBag').click( function(){
+    $('.cart-section').fadeToggle(2000);
+  });
+
 
 
  });

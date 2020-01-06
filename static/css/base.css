@@ -21,12 +21,24 @@ ul {
 .twitter {
   background-color: #1C9CEA; }
 
+/*  SECTIONS  */
 .section {
   clear: both;
-  padding: 0;
-  margin: 0; }
+  padding: 0px;
+  margin: 0px; }
 
-.group:before, .group:after {
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%; }
+
+.col:first-child {
+  margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after {
   content: "";
   display: table; }
 
@@ -282,5 +294,50 @@ ul {
   text-align: center;
   font-size: 2em;
   color: #fff; }
+
+/*********** Cart-section Css *************/
+.cart-section {
+  position: fixed;
+  bottom: 10%;
+  right: 0;
+  height: 400px;
+  width: 300px;
+  background: rgba(250, 108, 81, 0.8);
+  z-index: 20;
+  border-radius: 5px; }
+
+.cart-button {
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  width: 180px;
+  height: 45px;
+  z-index: 50;
+  background: rgba(250, 108, 81, 0.6);
+  border-radius: 5px;
+  z-index: 100; }
+  .cart-button .one_of_two {
+    width: 49.2%;
+    float: left;
+    margin-left: 0; }
+  .cart-button .bag-btn, .cart-button .clearBag-bag {
+    width: 100%;
+    border: none;
+    margin-top: 5px;
+    height: 35px;
+    font-size: 16px;
+    color: #222; }
+  .cart-button .clearBag-bag i {
+    color: #ee2128; }
+  .cart-button .bag-btn i {
+    color: #4caf50; }
+  .cart-button .bag-btn:hover, .cart-button .clearBag-bag:hover {
+    background: #fff;
+    color: #fa6c51; }
+    .cart-button .bag-btn:hover i, .cart-button .clearBag-bag:hover i {
+      transform: rotate(360deg);
+      transition: ease 1s; }
+
+/*********** End Cart-section Css *************/
 
 /*# sourceMappingURL=base.css.map */

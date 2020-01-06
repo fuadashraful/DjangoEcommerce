@@ -19,25 +19,26 @@ ul
 .instagram{background-color: #D1004F;}
 .twitter{background-color: #1C9CEA;}
 
-.section
-{
-    clear: both;
-    padding: 0;
-    margin: 0;
+ /*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
 }
-.group:before,.group:after
-{
- content: "";
- display: table;
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
 }
-.group:after
-{
-    clear: both;
-}
-.group
-{
-    zoom: 1;
-}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1;  }
 /* end general   */
 
  /* nav and search bar*/ 
@@ -470,3 +471,73 @@ ul
     font-size: 2em;
     color: #fff;
 }
+
+/*********** Cart-section Css *************/
+.cart-section{
+    position: fixed;
+    bottom: 10%;
+    right: 0;
+    height: 400px;
+    width: 300px;
+    background: rgba(250, 108, 81, 0.8);
+    z-index: 20;
+    border-radius: 5px;
+
+} 
+
+.cart-button{
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    width: 180px;
+    height: 45px;
+    z-index: 50;
+    background:rgba(250, 108, 81, 0.6);
+    border-radius: 5px;
+    z-index: 100;
+
+    .one_of_two{
+        width: 49.2%;
+        float: left;
+       
+        margin-left: 0;
+
+    
+    }
+    .bag-btn,.clearBag-bag{
+        width: 100%;
+        border: none;
+        margin-top: 5px;
+        height: 35px;
+        font-size: 16px;
+        color: #222;
+
+       
+    }
+    .clearBag-bag{
+        i{
+            color: rgba(238, 33, 40, 1.0);
+        }
+    }
+    .bag-btn{
+        i{
+            color: rgba(76, 175, 80, 1.0);
+        }
+    }
+
+    .bag-btn:hover,.clearBag-bag:hover{
+        background: #fff;
+        color: rgba(250, 108, 81, 1.0);
+        i {
+            transform: rotate(360deg);
+            transition: ease 1s;
+          }
+  
+    }
+ 
+    
+ 
+ 
+}
+
+/*********** End Cart-section Css *************/
