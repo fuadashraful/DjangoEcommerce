@@ -1,9 +1,13 @@
 from django.contrib import admin
-from .models import CurrentOffer,Category
+from .models import CurrentOffer,Category,Product
 
 # Register your models here.
-admin.site.register(CurrentOffer)
-admin.site.register(Category)
+
+class AuthorAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(CurrentOffer,AuthorAdmin)
+admin.site.register(Category,AuthorAdmin)
+admin.site.register(Product,AuthorAdmin)
 
 
 admin.site.site_header = "সদাই অনলাইন দোকান"
