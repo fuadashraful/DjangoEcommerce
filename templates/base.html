@@ -100,7 +100,7 @@
             {%for category in categorylist %}
             <div class="item card">
                  <img src="..{{category.categoryImage.url}}" id="categoyImg"> 
-                 <a href="#" class="card-text mt-2">{{category.name}}</a>
+                 <a href="{% url 'singleCategory' category.get_absolute_url category.id%}" class="card-text mt-2">{{category.name}}</a>
  
             </div>
             {% endfor %}

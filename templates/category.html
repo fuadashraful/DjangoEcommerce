@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{%load static %}
+
+{% block content%}
+   {% for item in product %}
+    <h1>{{item.name}}</h1>
+    <h1>{{item.price}}</h1>
+    <img src="..{{item.image.url}}" > 
+   {% endfor %}
+{% endblock content %}

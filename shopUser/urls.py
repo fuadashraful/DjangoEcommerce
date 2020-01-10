@@ -10,6 +10,7 @@ urlpatterns = [
     path('offers/',userViews.OfferView,name="offers"),
     path('logout/',userViews.logout,name="logout"),
     path('login/',userViews.loginView,name="login"),
+    path('category/<slug>/<id>/',userViews.categoryView,name='singleCategory'),
 ]
 
 if settings.DEBUG: 

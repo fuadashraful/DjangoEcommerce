@@ -62,10 +62,7 @@ class Category(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('core:category',kwargs={
-            'slug':self.slug
-        })
-    
+        return (self.slug)
  
 class Product(models.Model):
     name=models.CharField(max_length=200)
@@ -99,7 +96,7 @@ def unique_slug_generator(instance):
         num+=1
         slug=("{slug}-{num}".format(slug=constant_slug, num=num))
     return slug
-    
+
 def pre_save_reciever(sender,instance,*args,**kwargs):
     if not instance.slug:
         instance.slug=unique_slug_generator(instance)

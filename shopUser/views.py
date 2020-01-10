@@ -2,10 +2,8 @@ from django.shortcuts import render,redirect
 from django.views.generic import TemplateView
 from .forms import SignUpForm,UserLoginForm
 from django.contrib import messages,auth
-from .models import CurrentOffer,Category
+from .models import CurrentOffer,Category,Product
 # Create your views here.
-
-
 
 
 def HomeView(request):
@@ -77,3 +75,12 @@ def OfferView(request):
         context={}
         context["offerlist"]=offerlist
         return render(request,'offers.html',context)
+
+def categoryView(request,slug=None,id=None):
+    if id is not None:
+        category=Category.objects.get(pk=id)
+        product=category.product_set.all()
+        #print(product)
+ 
+
+    return render(request,'category.html',{'product':product})
