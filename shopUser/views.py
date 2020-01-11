@@ -82,5 +82,4 @@ def categoryView(request,slug=None,id=None):
         product=category.product_set.all()
         #print(product)
  
-
-    return render(request,'category.html',{'product':product})
+    return render(request,'test.html',{'product':product})
