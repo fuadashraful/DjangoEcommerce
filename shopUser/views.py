@@ -77,9 +77,10 @@ def OfferView(request):
         return render(request,'offers.html',context)
 
 def categoryView(request,slug=None,id=None):
+    context={}
     if id is not None:
         category=Category.objects.get(pk=id)
         product=category.product_set.all()
         #print(product)
- 
-    return render(request,'test.html',{'product':product})
+    context['product']=product
+    return render(request,'product.html',context)

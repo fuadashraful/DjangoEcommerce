@@ -81,8 +81,17 @@ class Product(models.Model):
             'slug':self.slug
         })
 
+    def compressImage(self,image):
+        imageTemproary = Image.open(image)
+        outputIoStream = BytesIO()
+        imageTemproaryResized = imageTemproary.resize( (1020,573) )
+        imageTemproary.save(outputIoStream , format='JPEG', quality=60)
+        outputIoStream.seek(0)
+        image= InMemoryUploadedFile(outputIoStream,'ImageField', "%s.jpg" % image.name.split('.')[0], 'image/jpeg', sys.getsizeof(outputIoStream), None)
+        return image
+ 
     def save(self,*args,**kwargs):
-        print("Save is called")
+        self.image=self.compressImage(self.image)
         super(Product,self).save(*args,**kwargs)
 
 

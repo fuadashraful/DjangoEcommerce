@@ -1,0 +1,50 @@
+.products {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+.product-grid {
+  width: 95%;
+  margin: 0 auto; }
+
+.one_of_four {
+  width: 22.8%; }
+  .one_of_four span {
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    padding: 2px 0; }
+
+.productImg {
+  width: 100%;
+  height: 200px; }
+
+.one_of_two {
+  width: 49%; }
+  .one_of_two button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+    background: #f96148;
+    color: #fff; }
+    .one_of_two button i {
+      margin-right: 3px; }
+  .one_of_two button:hover {
+    color: #f96148;
+    background: #fff; }
+
+/*** responsive design goes here ***/
+@media only screen and (max-width: 868px) {
+  .one_of_four {
+    width: 49%;
+    margin-left: 3px; } }
+@media only screen and (max-width: 600px) {
+  .one_of_four {
+    width: 100%;
+    margin-left: 3px; } }
+
+/*# sourceMappingURL=product.css.map */
