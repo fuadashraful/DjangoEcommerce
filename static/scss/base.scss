@@ -475,13 +475,56 @@ ul
 /*********** Cart-section Css *************/
 .cart-section{
     position: fixed;
+    overflow: scroll;
     bottom: 10%;
-    right: 0;
+    right: 1%;
     height: 400px;
     width: 300px;
     background: rgba(250, 108, 81, 0.8);
     z-index: 20;
     border-radius: 5px;
+
+    .item{
+        position: relative;
+        overflow: hidden;
+        width: 95%;
+        margin-left: 3%;
+        height: 50px;
+        border-radius: 5px;
+        background:rgba(70, 207, 84,0.8);
+        margin-top: 3px;
+        h4{
+            font-size: 20px;
+        }
+        span{
+            display: inline-block;
+            margin-top: -10px;
+            font-size: 12px;
+        }
+        input{
+            margin-top: 5px;
+        }
+        .remove-btn{
+            padding: 8px 10px;
+            margin-top: 5px;
+            font-size: 15px;
+            border: none;
+            i{
+                margin-right: 3px;
+            }
+        }
+
+        .remove-btn:hover i{
+            transform: rotate(360deg);
+            transition: ease 0.5s;       
+        }
+        .remove-btn:hover{
+            background-color: rgba(250, 96, 71, 1.0);
+            color: #fff;
+        }
+
+        
+    }
 
 } 
 
@@ -530,7 +573,7 @@ ul
         color: rgba(250, 108, 81, 1.0);
         i {
             transform: rotate(360deg);
-            transition: ease 1s;
+            transition: ease 0.5s;
           }
   
     }

@@ -20,6 +20,11 @@
   width: 100%;
   height: 200px; }
 
+.productItem:hover {
+  box-shadow: 0 0 11px #f9634a;
+  font-size: 1.7em;
+  transform: ease 0.5s; }
+
 .one_of_two {
   width: 49%; }
   .one_of_two button {

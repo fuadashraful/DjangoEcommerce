@@ -298,13 +298,44 @@ ul {
 /*********** Cart-section Css *************/
 .cart-section {
   position: fixed;
+  overflow: scroll;
   bottom: 10%;
-  right: 0;
+  right: 1%;
   height: 400px;
   width: 300px;
   background: rgba(250, 108, 81, 0.8);
   z-index: 20;
   border-radius: 5px; }
+  .cart-section .item {
+    position: relative;
+    overflow: hidden;
+    width: 95%;
+    margin-left: 3%;
+    height: 50px;
+    border-radius: 5px;
+    background: rgba(70, 207, 84, 0.8);
+    margin-top: 3px; }
+    .cart-section .item h4 {
+      font-size: 20px; }
+    .cart-section .item span {
+      display: inline-block;
+      margin-top: -10px;
+      font-size: 12px; }
+    .cart-section .item input {
+      margin-top: 5px; }
+    .cart-section .item .remove-btn {
+      padding: 8px 10px;
+      margin-top: 5px;
+      font-size: 15px;
+      border: none; }
+      .cart-section .item .remove-btn i {
+        margin-right: 3px; }
+    .cart-section .item .remove-btn:hover i {
+      transform: rotate(360deg);
+      transition: ease 0.5s; }
+    .cart-section .item .remove-btn:hover {
+      background-color: #fa6047;
+      color: #fff; }
 
 .cart-button {
   position: fixed;
@@ -336,7 +367,7 @@ ul {
     color: #fa6c51; }
     .cart-button .bag-btn:hover i, .cart-button .clearBag-bag:hover i {
       transform: rotate(360deg);
-      transition: ease 1s; }
+      transition: ease 0.5s; }
 
 /*********** End Cart-section Css *************/
 

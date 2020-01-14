@@ -7,7 +7,6 @@ from django.utils.text import slugify
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db.models.signals import pre_save
 
-
 class CurrentOffer(models.Model):
 
     offerName=models.CharField(max_length=200)
@@ -71,7 +70,7 @@ class Product(models.Model):
     category=models.ForeignKey(Category,on_delete=models.CASCADE)
     description=models.TextField()
     image=models.ImageField(upload_to='product/',blank=False)
-    slug = models.SlugField(default='my-product',unique=True)
+    slug = models.SlugField(default='my-product',unique=False)
 
     def __str__(self):
         return self.name

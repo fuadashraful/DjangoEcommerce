@@ -9,112 +9,31 @@
   <!-- Display product from database -->
 <div class="products">
   <div class="product-grid section group">
-
-    <div class="col one_of_four card">
-      <span>Mango</span>
-      <img class="productImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRx6VW3QNbYFI6Hcu4KM3cUtvGkFD4F7M-py5cTymVVLwTEWVDx">
+    {% for item in product %}
+    <div class="col one_of_four card productItem">
+      <span>{{item.name}}</span>
+      <img class="productImg" src="../../..{{item.image.url}}" >
+       
       <span>Previous <del> 11545</del></span>
-      <span>Price 11545</span>
+      <span>Price {{item.price}}</span>
       <div class="grid-btn group section">
-       <a href="#">  <div class="col one_of_two"><button><i class="fas fa-cart-plus"></i>Bag</button></div> </a>
+        <div class="col one_of_two"><button class="add-to-bag" data-id="{{item.id}}"><i class="fas fa-cart-plus"></i>Bag</button></div>  
        <a href="#">  <div class="col one_of_two"><button><i class="fas fa-list"></i>Details</button></div> </a>
       </div>
+      
     </div>
-
-    <div class="col one_of_four card">
-      <span>Lichy</span>
-      <img class="productImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQTa3GadN0KoFJbrUYsm_UDxz-a3rWfrGiSdmYtaPKSKi9NOOG4">
-      <span>Previous <del> 11545</del></span>
-      <span>Price 11545</span>
-      <div class="grid-btn group section">
-       <a href="#">  <div class="col one_of_two"><button><i class="fas fa-cart-plus"></i>Bag</button></div> </a>
-       <a href="#">  <div class="col one_of_two"><button><i class="fas fa-list"></i>Details</button></div> </a>
-      </div>
-    </div>
-    
-
-
-    <div class="col one_of_four card">
-      <span>Mango</span>
-      <img class="productImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRx6VW3QNbYFI6Hcu4KM3cUtvGkFD4F7M-py5cTymVVLwTEWVDx">
-      <span>Previous <del> 11545</del></span>
-      <span>Price 11545</span>
-      <div class="grid-btn group section">
-       <a href="#">  <div class="col one_of_two"><button><i class="fas fa-cart-plus"></i>Bag</button></div> </a>
-       <a href="#">  <div class="col one_of_two"><button><i class="fas fa-list"></i>Details</button></div> </a>
-      </div>
-    </div>
-
-    <div class="col one_of_four card">
-      <span>Lichy</span>
-      <img class="productImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQTa3GadN0KoFJbrUYsm_UDxz-a3rWfrGiSdmYtaPKSKi9NOOG4">
-      <span>Previous <del> 11545</del></span>
-      <span>Price 11545</span>
-      <div class="grid-btn group section">
-       <a href="#">  <div class="col one_of_two"><button><i class="fas fa-cart-plus"></i>Bag</button></div> </a>
-       <a href="#">  <div class="col one_of_two"><button><i class="fas fa-list"></i>Details</button></div> </a>
-      </div>
-    </div>
-
-
-
-    <div class="col one_of_four card">
-      <span>Mango</span>
-      <img class="productImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRx6VW3QNbYFI6Hcu4KM3cUtvGkFD4F7M-py5cTymVVLwTEWVDx">
-      <span>Previous <del> 11545</del></span>
-      <span>Price 11545</span>
-      <div class="grid-btn group section">
-       <a href="#">  <div class="col one_of_two"><button><i class="fas fa-cart-plus"></i>Bag</button></div> </a>
-       <a href="#">  <div class="col one_of_two"><button><i class="fas fa-list"></i>Details</button></div> </a>
-      </div>
-    </div>
-
-    <div class="col one_of_four card">
-      <span>Lichy</span>
-      <img class="productImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQTa3GadN0KoFJbrUYsm_UDxz-a3rWfrGiSdmYtaPKSKi9NOOG4">
-      <span>Previous <del> 11545</del></span>
-      <span>Price 11545</span>
-      <div class="grid-btn group section">
-       <a href="#">  <div class="col one_of_two"><button><i class="fas fa-cart-plus"></i>Bag</button></div> </a>
-       <a href="#">  <div class="col one_of_two"><button><i class="fas fa-list"></i>Details</button></div> </a>
-      </div>
-    </div>
-
-
-
-
-    <div class="col one_of_four card">
-      <span>Mango</span>
-      <img class="productImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRx6VW3QNbYFI6Hcu4KM3cUtvGkFD4F7M-py5cTymVVLwTEWVDx">
-      <span>Previous <del> 11545</del></span>
-      <span>Price 11545</span>
-      <div class="grid-btn group section">
-       <a href="#">  <div class="col one_of_two"><button><i class="fas fa-cart-plus"></i>Bag</button></div> </a>
-       <a href="#">  <div class="col one_of_two"><button><i class="fas fa-list"></i>Details</button></div> </a>
-      </div>
-    </div>
-
-    <div class="col one_of_four card">
-      <span>Lichy</span>
-      <img class="productImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQTa3GadN0KoFJbrUYsm_UDxz-a3rWfrGiSdmYtaPKSKi9NOOG4">
-      <span>Previous <del> 11545</del></span>
-      <span>Price 11545</span>
-      <div class="grid-btn group section">
-       <a href="#">  <div class="col one_of_two"><button><i class="fas fa-cart-plus"></i>Bag</button></div> </a>
-       <a href="#">  <div class="col one_of_two"><button><i class="fas fa-list"></i>Details</button></div> </a>
-      </div>
-    </div>
-    
-
+ 
+    {% endfor %}
  
  
 
   </div>
 </div>
 
-<!-- Display product from database -->
-<!-- 
-  {% for item in product %}
-  <img src="../../..{{item.image.url}}">
-  {% endfor %} -->
 {% endblock content %}
+
+
+{%block JS %}
+<script src="{% static 'js/product.js' %}"></script>
+{% endblock JS%}
+

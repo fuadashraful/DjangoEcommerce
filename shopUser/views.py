@@ -4,7 +4,7 @@ from .forms import SignUpForm,UserLoginForm
 from django.contrib import messages,auth
 from .models import CurrentOffer,Category,Product
 # Create your views here.
-
+# https://data-flair.training/blogs/ajax-in-django/
 
 def HomeView(request):
     context={}
@@ -66,7 +66,6 @@ def SignUp(request):
         context["form"]=form
 
     return render(request,'registration/signup.html',context)
-
 
 def OfferView(request):
 

@@ -75,6 +75,16 @@
     <div class="cart-section">
         <div class="group section cart-box">
 
+                <div class="item row">
+                    <div class="col-md-8">
+                        <h4>Mango</h4>
+                        <span>Price 49949</span>
+                    </div>
+                    <div class="col-md-4">
+                         <button type="submit" removId='my-id' class="remove-btn"  ><i class="fas fa-cut"></i>Cut</button>
+                    </div>
+                </div>
+                
         </div>
     </div>
     <div class="cart-button group section">
@@ -117,16 +127,17 @@
     </div>
 
     <!-- bootstrap js  -->
-   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!--ion-icon cdn-->
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <!-- Carousal JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{% static 'vendorJs/slick.min.js' %}"></script>
     <script src="{% static 'js/base.js' %}"></script>
 
-    {%block JS %}{% endblock JS%}
+    {%block JS %}
+    
+    {% endblock JS%}
 </body>
 </html>
