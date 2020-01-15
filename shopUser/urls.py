@@ -11,5 +11,6 @@ urlpatterns = [
     path('logout/',userViews.logout,name="logout"),
     path('login/',userViews.loginView,name="login"),
     path('category/<slug>/<id>/',userViews.categoryView,name='singleCategory'),
+    path('user_profile/<int:id>',userViews.ProfileView,name='profile'),
     
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

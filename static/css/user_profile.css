@@ -1,0 +1,21 @@
+.user-upload {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background-color: #f8543d; }
+  .user-upload .upload-content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #fff; }
+    .user-upload .upload-content h2 {
+      font-size: 3rem; }
+    .user-upload .upload-content p {
+      font-size: 1.2rem; }
+    .user-upload .upload-content i {
+      margin-right: 5px; }
+    .user-upload .upload-content .sell-btn {
+      font-size: 1.6rem;
+      color: #111;
+      padding: 10px 20px; }
+
+/*# sourceMappingURL=user_profile.css.map */

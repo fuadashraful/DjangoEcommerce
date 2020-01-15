@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 from .forms import SignUpForm,UserLoginForm
 from django.contrib import messages,auth
 from .models import CurrentOffer,Category,Product
+from django.contrib.auth.models import User
 # Create your views here.
 # https://data-flair.training/blogs/ajax-in-django/
 
@@ -83,3 +84,9 @@ def categoryView(request,slug=None,id=None):
         #print(product)
     context['product']=product
     return render(request,'product.html',context)
+
+def ProfileView(request,id=None):
+    context={}
+    context['id']=id
+    context['name']=User.objects.get(pk=id).username
+    return render(request,'user_profile.html',context)
