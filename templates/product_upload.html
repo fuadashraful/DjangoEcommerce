@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{%block CSS %}
+<link rel="stylesheet" href="{% static 'css/product_upload.css' %}">
+{% endblock CSS%}
+{% block content %}
+ 
+<div class="container">
+    <div class="upload-form text-center">
+        <form method="POST">
+            {% csrf_token %}
+            <h2 class=""><span id="sodai">Sodai</span> Upload</h2>
+            
+            {% for item in form %}
+            <p class="name">
+                {{item.label_tag}}
+                <br>
+                 {{item}}
+            </p>
+            {% endfor %}
+
+            <div class="submit">
+                <button class="my-3">Upload</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}

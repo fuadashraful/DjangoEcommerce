@@ -1,0 +1,82 @@
+
+
+.upload-form{
+    margin: 0 auto;
+    background-color:rgba(72,72,72,0.4);
+    width: 80%;
+    
+    position: relative;
+    h2{
+        padding: 20px 0;
+        color: #363636;
+        font-size: 3.5rem;
+    }
+
+    form{
+        width: 95%;
+        margin: 0 auto;
+
+        input{
+            overflow: visible;
+            height: 40px;
+            width: 50%;
+            border: none;
+            font-size: 20px;
+            text-align: center;
+            color:#343434;
+        }
+        label{
+            display: inline-block;
+            margin-bottom: .5rem;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        select{
+            width: 40%;
+            text-align: center;
+            border: none;
+            height: 40px;
+            font-size: 16px; 
+        }
+        textarea{
+            width: 50%;
+            height: 110px;
+        }
+
+        input:focus,textarea:focus,select:focus{
+            box-shadow: 0px 10px 20px -13px rgba(249, 89, 65, 1.0);
+        }
+        
+    }
+
+    #sodai{
+        color:rgba(249, 89, 65, 1.0);
+    }
+ 
+}
+
+.submit button{
+    background:rgba(249, 89, 65, 1.0);
+    color:
+    #fff;
+    border: 1px solid
+    #fff;
+    height: 50px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 400;
+    -webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+ 
+.submit button:hover{
+   
+    background-color: #fff;
+    color:rgba(249, 89, 65, 1.0);
+    box-shadow: 0px 10px 20px -13px rgba(249, 89, 65, 1.0);
+}
+

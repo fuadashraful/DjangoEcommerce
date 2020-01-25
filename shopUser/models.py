@@ -64,7 +64,10 @@ class Category(models.Model):
         return (self.slug)
  
 class Product(models.Model):
+
     name=models.CharField(max_length=200)
+    uploaded_by=models.IntegerField(null=False,default=0)
+    uploaded_from=models.CharField(max_length=200)
     price=models.FloatField()
     discount_price=models.FloatField(blank=True,null=True)
     category=models.ForeignKey(Category,on_delete=models.CASCADE)

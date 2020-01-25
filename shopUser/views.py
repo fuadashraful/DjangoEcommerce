@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.views.generic import TemplateView
-from .forms import SignUpForm,UserLoginForm
+from .forms import SignUpForm,UserLoginForm,ProductForm
 from django.contrib import messages,auth
 from .models import CurrentOffer,Category,Product
 from django.contrib.auth.models import User
@@ -69,12 +69,9 @@ def SignUp(request):
     return render(request,'registration/signup.html',context)
 
 def OfferView(request):
-
-    if request.method=="GET":
-        offerlist=CurrentOffer.objects.all()
-        context={}
-        context["offerlist"]=offerlist
-        return render(request,'offers.html',context)
+    context={}
+   
+    return render(request,'offers.html',context)
 
 def categoryView(request,slug=None,id=None):
     context={}
@@ -90,3 +87,36 @@ def ProfileView(request,id=None):
     context['id']=id
     context['name']=User.objects.get(pk=id).username
     return render(request,'user_profile.html',context)
+
+def productUpload(request):
+    context={}
+    if request.method=="POST":
+
+        product_name=request.POST["name"]
+        present_user=request.user.id
+        upload_from=request.POST["uploaded_from"]
+        product_price=request.POST["price"]
+        product_discount_price=request.POST["discount_price"]
+        product_category=Category.objects.get(pk=request.POST["category"])
+        product_description=request.POST["description"]
+        product_image="product/"+request.POST["image"]
+        
+        print(product_category)
+        obj=Product(name=product_name,uploaded_by=present_user,uploaded_from=upload_from,
+        price=product_price,discount_price=product_discount_price,category=product_category,
+        description=product_description,image=product_image
+        )
+        obj.save()
+
+        '''
+        new_product=Product(form.name,present_user,form.uploaded_from,form.price,form.discount_price,form.category,
+        form.description,form.image)
+        new_product.save()
+        '''
+        #print(request.user.id)
+        return redirect('home')
+    else:
+
+        form=ProductForm()
+        context["form"]=form
+    return render(request,'product_upload.html',context)

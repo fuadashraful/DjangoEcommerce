@@ -1,0 +1,59 @@
+.upload-form {
+  margin: 0 auto;
+  background-color: rgba(72, 72, 72, 0.4);
+  width: 80%;
+  position: relative; }
+  .upload-form h2 {
+    padding: 20px 0;
+    color: #363636;
+    font-size: 3.5rem; }
+  .upload-form form {
+    width: 95%;
+    margin: 0 auto; }
+    .upload-form form input {
+      overflow: visible;
+      height: 40px;
+      width: 50%;
+      border: none;
+      font-size: 20px;
+      text-align: center;
+      color: #343434; }
+    .upload-form form label {
+      display: inline-block;
+      margin-bottom: .5rem;
+      font-size: 16px;
+      font-weight: 500; }
+    .upload-form form select {
+      width: 40%;
+      text-align: center;
+      border: none;
+      height: 40px;
+      font-size: 16px; }
+    .upload-form form textarea {
+      width: 50%;
+      height: 110px; }
+    .upload-form form input:focus, .upload-form form textarea:focus, .upload-form form select:focus {
+      box-shadow: 0px 10px 20px -13px #f95941; }
+  .upload-form #sodai {
+    color: #f95941; }
+
+.submit button {
+  background: #f95941;
+  color: #fff;
+  border: 1px solid #fff;
+  height: 50px;
+  width: 200px;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -o-transition: .3s ease;
+  -ms-transition: .3s ease;
+  transition: .3s ease; }
+
+.submit button:hover {
+  background-color: #fff;
+  color: #f95941;
+  box-shadow: 0px 10px 20px -13px #f95941; }
+
+/*# sourceMappingURL=product_upload.css.map */

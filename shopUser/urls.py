@@ -10,6 +10,7 @@ urlpatterns = [
     path('offers/',userViews.OfferView,name="offers"),
     path('logout/',userViews.logout,name="logout"),
     path('login/',userViews.loginView,name="login"),
+    path('upload_product/',userViews.productUpload,name="upload"),
     path('category/<slug>/<id>/',userViews.categoryView,name='singleCategory'),
     path('user_profile/<int:id>',userViews.ProfileView,name='profile'),
     

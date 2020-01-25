@@ -1,1 +1,14 @@
- 
+{% extends 'base.html'%}
+{% load static %}
+
+
+
+{% block content %}
+  {%for field in form %}
+  {{field.label_tag}}
+  {{field}}
+  <br>
+  {% endfor %}
+  <!-- {{form.name.label_tag}}
+  {{form.name}} -->
+{% endblock content %}
