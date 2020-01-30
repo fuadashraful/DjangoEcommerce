@@ -72,7 +72,7 @@ class Product(models.Model):
     discount_price=models.FloatField(blank=True,null=True)
     category=models.ForeignKey(Category,on_delete=models.CASCADE)
     description=models.TextField()
-    image=models.ImageField(upload_to='product/',blank=False)
+    image=models.ImageField(upload_to='product',blank=False)
     slug = models.SlugField(default='my-product',unique=False)
 
     def __str__(self):
@@ -82,36 +82,16 @@ class Product(models.Model):
         return reverse("core:product",kwargs={
             'slug':self.slug
         })
-
-    def compressImage(self,image):
-        imageTemproary = Image.open(image)
-        outputIoStream = BytesIO()
-        imageTemproaryResized = imageTemproary.resize( (1020,573) )
-        imageTemproary.save(outputIoStream , format='JPEG', quality=60)
-        outputIoStream.seek(0)
-        image= InMemoryUploadedFile(outputIoStream,'ImageField', "%s.jpg" % image.name.split('.')[0], 'image/jpeg', sys.getsizeof(outputIoStream), None)
-        return image
- 
+        
     def save(self,*args,**kwargs):
-        self.image=self.compressImage(self.image)
         super(Product,self).save(*args,**kwargs)
 
 
- 
-def unique_slug_generator(instance):
-    constant_slug=slugify(instance.name)
-    slug=constant_slug
-    instanceClass=instance.__class__
-    num=0
-    while instanceClass.objects.filter(slug=slug).exists():
-        num+=1
-        slug=("{slug}-{num}".format(slug=constant_slug, num=num))
-    return slug
 
-def pre_save_reciever(sender,instance,*args,**kwargs):
-    if not instance.slug:
-        instance.slug=unique_slug_generator(instance)
+class UserProfile(models.Model):
+    user=models.CharField(max_length=200)
+    city=models.CharField(max_length=200)
+    userImage=models.ImageField(upload_to='profile_image',blank=False)
 
-pre_save.connect(pre_save_reciever,sender=Category)
-pre_save.connect(pre_save_reciever,sender=Product)
- 
+    def __str__(self):
+        return self.user

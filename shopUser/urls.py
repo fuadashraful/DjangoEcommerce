@@ -13,5 +13,6 @@ urlpatterns = [
     path('upload_product/',userViews.productUpload,name="upload"),
     path('category/<slug>/<id>/',userViews.categoryView,name='singleCategory'),
     path('user_profile/<int:id>',userViews.ProfileView,name='profile'),
+    path('user/',userViews.userProfile,name='user'),
     
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

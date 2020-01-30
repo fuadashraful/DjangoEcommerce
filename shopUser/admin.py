@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CurrentOffer,Category,Product
+from .models import CurrentOffer,Category,Product,UserProfile
 
 # Register your models here.
 
@@ -8,6 +8,7 @@ class AuthorAdmin(admin.ModelAdmin):
 admin.site.register(CurrentOffer,AuthorAdmin)
 admin.site.register(Category,AuthorAdmin)
 admin.site.register(Product,AuthorAdmin)
+admin.site.register(UserProfile)
 
 
 admin.site.site_header = "সদাই অনলাইন দোকান"

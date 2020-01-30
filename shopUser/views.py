@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.views.generic import TemplateView
-from .forms import SignUpForm,UserLoginForm,ProductForm
+from .forms import SignUpForm,UserLoginForm,ProductForm,UserForm
 from django.contrib import messages,auth
 from .models import CurrentOffer,Category,Product
 from django.contrib.auth.models import User
@@ -91,32 +91,32 @@ def ProfileView(request,id=None):
 def productUpload(request):
     context={}
     if request.method=="POST":
-
-        product_name=request.POST["name"]
-        present_user=request.user.id
-        upload_from=request.POST["uploaded_from"]
-        product_price=request.POST["price"]
-        product_discount_price=request.POST["discount_price"]
-        product_category=Category.objects.get(pk=request.POST["category"])
-        product_description=request.POST["description"]
-        product_image="product/"+request.POST["image"]
-        
-        print(product_category)
-        obj=Product(name=product_name,uploaded_by=present_user,uploaded_from=upload_from,
-        price=product_price,discount_price=product_discount_price,category=product_category,
-        description=product_description,image=product_image
-        )
-        obj.save()
-
-        '''
-        new_product=Product(form.name,present_user,form.uploaded_from,form.price,form.discount_price,form.category,
-        form.description,form.image)
-        new_product.save()
-        '''
-        #print(request.user.id)
+        form=ProductForm(request.POST,request.FILES)
+        if form.is_valid():
+            obj=form.save(commit=False)
+            obj.uploaded_by=request.user.id
+            obj.save()
         return redirect('home')
-    else:
 
+    else:
         form=ProductForm()
         context["form"]=form
     return render(request,'product_upload.html',context)
+
+
+# this is test views before appling any action
+def userProfile(request):
+    context={}
+
+    if request.method=="POST":
+        form=UserForm(request.POST,request.FILES)
+        if form.is_valid():
+            form.save()
+        return redirect('home')
+
+    else:
+        form=UserForm()
+        context["form"]=form
+    return render(request,'user.html',context)
+
+#https://tutorial.djangogirls.org/en/django_forms/?q=

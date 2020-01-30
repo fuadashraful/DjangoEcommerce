@@ -31,7 +31,8 @@
       font-size: 16px; }
     .upload-form form textarea {
       width: 50%;
-      height: 110px; }
+      height: 110px;
+      font-size: 16px; }
     .upload-form form input:focus, .upload-form form textarea:focus, .upload-form form select:focus {
       box-shadow: 0px 10px 20px -13px #f95941; }
   .upload-form #sodai {
