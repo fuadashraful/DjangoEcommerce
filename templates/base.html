@@ -16,6 +16,17 @@
 </head>
 <body>
 
+    {% if messages %}
+ 
+    {% for message in messages %}
+ 
+      <div class="alert alert-success text-center messages" role="alert">
+        {{ message }}
+      </div>
+    {% endfor %}
+ 
+{% endif %}
+
     <div class="navbarAndSearch">
      <div class="navbar mt-2">
          <ul class="left-ul">
@@ -69,34 +80,7 @@
     </div>
 
     {%endblock Carousal%}
-
-
-    <!-- Cart section -->
-    <div class="cart-section">
-        <div class="group section cart-box">
-
-                <div class="item row">
-                    <div class="col-md-8">
-                        <h4>Mango</h4>
-                        <span>Price 49949</span>
-                    </div>
-                    <div class="col-md-4">
-                         <button type="submit" removId='my-id' class="remove-btn"  ><i class="fas fa-cut"></i>Cut</button>
-                    </div>
-                </div>
-                
-        </div>
-    </div>
-    <div class="cart-button group section">
-         
-       <div class="col one_of_two">
-           <button class="bag-btn" id="IdBag"><i class="fa fa-cart-plus"></i> Bag</button>
-       </div>
-       <div class="col one_of_two">
-          <button class="clearBag-bag"><i class="far fa-trash-alt"></i> clear</button> 
-       </div>
-    </div>
-    <!-- Cart section end -->
+ 
 
     <!-- Categoies --> 
     <!-- Main content block -->
@@ -122,8 +106,56 @@
 
 
 
-    <div class="footer">
-        <p>All rights reserverd by &copy; teamChemist</p>
+    <div class="footer-section">
+        <div class="company-description container">
+            <h1> <span class="company-logo">CodeChmist</span> Solutions</h1>
+            <h3>One Stop <span class="company-logo"> IT solution</span></h3>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <div class="card developer">
+                        <div class="top-background">
+                            <img alt="" src="{%static 'images/programming.jpeg'%}">
+                        </div>
+                        <div class="developer-img">
+                            <img alt="Fuad Ashraful" src="{% static 'images/developer-ashraful.jpg' %}">
+                        </div>
+                        <div class="developer-title text-center">
+                                <h3>By<span class="developer-name"> Fuad Ashraful</span> </h3>
+                                <span>Front & Backend Developer</span>               
+                        </div>
+
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/profile.php?id=100005430676436"><i class="fab fa-facebook-f"></i></a></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a></a>
+                            <a href=""><i class="fab fa-twitter"></i></a></a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-8">
+                    <div class="services">
+                        <h3>Services We provide</h3>
+                        <ul>
+                            <li><i class="fab fa-app-store-ios fa-2x"></i> App Development</li>
+                            <li><i class="fas fa-comments-dollar fa-2x"></i>E-commerce</li>
+                            <li><i class="fas fa-robot fa-2x"></i>ML & AI</li>
+                            <li><i class="fas fa-cloud fa-2x"></i>Cloud Solution</li>
+                        </ul>            
+                    </div>
+                </div>
+
+
+
+            </div>
+             
+            <p class="mt-4 text-center footer-text">Right goes to<strong> Fuad Ashraful </strong> &copy; 2020 </p>
+        </div>
     </div>
 
     <!-- bootstrap js  -->
@@ -133,6 +165,7 @@
     <!--ion-icon cdn-->
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <!-- Carousal JS -->
+    <script src="{% static 'vendorJs/jquery.elevatezoom.js' %}"></script>
     <script src="{% static 'vendorJs/slick.min.js' %}"></script>
     <script src="{% static 'js/base.js' %}"></script>
 

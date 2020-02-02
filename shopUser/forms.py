@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
-from .models import Product,UserProfile
+from .models import Product,UserProfile,Order
 from django.forms import ModelForm
 # https://simpleisbetterthancomplex.com/tutorial/2017/02/18/how-to-create-user-sign-up-view.html
 class SignUpForm(UserCreationForm):
@@ -60,3 +60,10 @@ class UserForm(ModelForm):
     class Meta:
         model=UserProfile
         fields='__all__'
+
+
+class BuyProductForm(ModelForm):
+    
+    class Meta:
+        model=Order
+        fields=['location','contact','transection_no','payment_method']

@@ -14,5 +14,8 @@ urlpatterns = [
     path('category/<slug>/<id>/',userViews.categoryView,name='singleCategory'),
     path('user_profile/<int:id>',userViews.ProfileView,name='profile'),
     path('user/',userViews.userProfile,name='user'),
+    path('buyproduct/<categoryName>/<int:id>',userViews.buyView,name="buyproduct"),
+    path('product-details/<categoryName>/<int:id>',userViews.productDetailsView,name="product_details"),
+
     
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

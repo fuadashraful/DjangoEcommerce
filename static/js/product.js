@@ -5,5 +5,13 @@ $(document).ready(function(){
     var ID= $(this).attr("data-id");
     console.log(ID);
  });
+
+//  Elevate zoom
+
+$(".productImg").elevateZoom({
+   zoomType	: "inner",
+   cursor: "crosshair"
+ });
+// End elevalte zoom
     
 });

@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.views.generic import TemplateView
-from .forms import SignUpForm,UserLoginForm,ProductForm,UserForm
+from .forms import SignUpForm,UserLoginForm,ProductForm,UserForm,BuyProductForm
 from django.contrib import messages,auth
 from .models import CurrentOffer,Category,Product
 from django.contrib.auth.models import User
@@ -118,5 +118,35 @@ def userProfile(request):
         form=UserForm()
         context["form"]=form
     return render(request,'user.html',context)
+
+
+def buyView(request,categoryName=None,id=None):
+    context={}
+    if request.method=="POST":
+        form=BuyProductForm(request.POST)
+        if form.is_valid():
+            order_obj=form.save(commit=False)
+            order_obj.ordered_by=request.user.id
+            order_obj.product_id=id
+            order_obj.price=Product.objects.get(pk=id).price
+            order_obj.save()
+            messages.success(request, 'Your order recieved successfully thanks !') 
+        return redirect('home')
+    else:
+        form=BuyProductForm()
+        product=Product.objects.get(pk=id)
+        owner=User.objects.get(pk=product.uploaded_by).username
+        context['order_form']=form
+        context['product']=product
+        context['owner']=owner
+    return render(request,'buy_product.html',context)
+
+
+
+def productDetailsView(request,categoryName=None,id=None):
+    context={}
+    product=Product.objects.get(pk=id)
+    context['product']=product
+    return render(request,'product_details.html',context)
 
 #https://tutorial.djangogirls.org/en/django_forms/?q=

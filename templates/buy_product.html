@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block CSS %}
+<link rel="stylesheet" href="{% static 'css/buy_product.css' %}">
+{% endblock CSS%}
+{% load static %}
+
+
+{% block content %}
+ 
+<div class="product-description">
+ 
+         <div class="product-item container">
+
+            <form method="POST">
+                {% csrf_token %}
+             <div class="row">
+                 <div class="col-md-6 col-12">
+                     <div class="card">
+                        <h4>Collected From <span> {{product.uploaded_from}}</span></h4>
+                        <h5>Owner {{owner}}</h5>
+                        <img class="product-img" src="../..{{product.image.url}}"> 
+                        <p>Price: {{product.price}} BDT</p>     
+                     </div>
+
+                 </div>
+                 <div class="col-md-6 col-12 card">
+                    <div class="buy_form">
+                        {%for item in order_form %}
+                         <div class="field-wrapper">
+                            <label>{{item.label}}</label>  
+                             {{item}}
+                         </div>
+                        {% endfor%}
+
+                        <button class="order-btn"><i class="fas fa-shopping-cart"></i> Order Done</button>
+                    </div>
+                </div>
+                 </div>
+             </div>
+            </form>
+         </div>
+</div>
+{% endblock %}
+
+
+{%block JS %}
+ <script src="{% static 'js/buy_product.js' %}"></script>
+{% endblock JS%}

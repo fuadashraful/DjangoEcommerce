@@ -41,7 +41,11 @@ ul
 .group { zoom:1;  }
 /* end general   */
 
- /* nav and search bar*/ 
+ /* nav and search bar*/
+
+.messages{
+    font-size: 1.6rem;
+}
 .navbarAndSearch
 {
     font-family: 'Source Sans Pro', sans-serif;
@@ -463,124 +467,116 @@ ul
 /* end navbar and searchbar */
 
 
-.footer
-{
-    background: rgb(206, 73, 58);
-    height: 50px;
+
+
+/**** footer section start  *****/
+.footer-section{
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.company-description{
     text-align: center;
-    font-size: 2em;
-    color: #fff;
-}
-
-/*********** Cart-section Css *************/
-.cart-section{
-    position: fixed;
-    overflow: scroll;
-    bottom: 10%;
-    right: 1%;
-    height: 400px;
-    width: 300px;
-    background: rgba(250, 108, 81, 0.8);
-    z-index: 20;
-    border-radius: 5px;
-
-    .item{
-        position: relative;
-        overflow: hidden;
-        width: 95%;
-        margin-left: 3%;
-        height: 50px;
-        border-radius: 5px;
-        background:rgba(70, 207, 84,0.8);
-        margin-top: 3px;
-        h4{
-            font-size: 20px;
-        }
-        span{
-            display: inline-block;
-            margin-top: -10px;
-            font-size: 12px;
-        }
-        input{
-            margin-top: 5px;
-        }
-        .remove-btn{
-            padding: 8px 10px;
-            margin-top: 5px;
-            font-size: 15px;
-            border: none;
-            i{
-                margin-right: 3px;
-            }
-        }
-
-        .remove-btn:hover i{
-            transform: rotate(360deg);
-            transition: ease 0.5s;       
-        }
-        .remove-btn:hover{
-            background-color: rgba(250, 96, 71, 1.0);
-            color: #fff;
-        }
-
-        
+    span{
+        display: inline-block;
     }
 
-} 
-
-.cart-button{
-    position: fixed;
-    bottom: 1%;
-    right: 1%;
-    width: 180px;
-    height: 45px;
-    z-index: 50;
-    background:rgba(250, 108, 81, 0.6);
-    border-radius: 5px;
-    z-index: 100;
-
-    .one_of_two{
-        width: 49.2%;
-        float: left;
-       
-        margin-left: 0;
-
-    
+    h1{
+        font-size: 50px;
+        font-weight: 300;
     }
-    .bag-btn,.clearBag-bag{
-        width: 100%;
-        border: none;
-        margin-top: 5px;
-        height: 35px;
-        font-size: 16px;
-        color: #222;
-
-       
+    h3{
+        font-size: 18px;
+        font-weight: 500;
     }
-    .clearBag-bag{
-        i{
-            color: rgba(238, 33, 40, 1.0);
-        }
-    }
-    .bag-btn{
-        i{
-            color: rgba(76, 175, 80, 1.0);
-        }
-    }
-
-    .bag-btn:hover,.clearBag-bag:hover{
-        background: #fff;
-        color: rgba(250, 108, 81, 1.0);
-        i {
-            transform: rotate(360deg);
-            transition: ease 0.5s;
-          }
   
+
+    .company-logo{
+        color: rgba(248, 80, 57, 1.0);
     }
- 
-    
- 
- 
+}
+.services,.developer
+{
+    margin-top: 50px;
+}
+.developer{
+    box-sizing: border-box;
+     
+    padding: 10px;
+    .top-background{
+
+        img{
+          height: 100px;
+          width: 100%;
+        }
+    }
+
+    .developer-img{
+        img{
+            width: 150px;
+            height: 150px;
+            border: 3px solid #333333;
+            border-radius: 50%;
+            margin-left: 25%;
+            margin-top: -20%;
+          
+        }
+    }
+
+    .developer-title{
+        span{
+            font-size: 16px;
+        }
+        .developer-name{
+            color: rgba(248, 80, 57, 1.0);
+        }
+    }
+
+    .social-icons{
+         position: relative;
+         display: block;
+         margin-left: 30%;
+        a{
+            display: inline-block;
+            color:rgba(21, 170, 191, 1.0);
+            text-decoration: none;
+            padding: 10px;
+            margin: 10px 5px;
+            font-size: 16px;
+            border-radius: 50%;
+        }
+        a:hover{
+            padding: 11px;
+        }
+    }
 }
 
-/*********** End Cart-section Css *************/
+.services{
+    text-align: center;
+
+    h3{
+        color:rgba(248, 80, 57, 0.8);
+        font-weight: 400;
+    }
+ 
+    li{
+        display: block;
+        padding: 5px 8px;
+        font-size: 20px;
+        color:rgba(21, 170, 191, 1.0);
+        i{
+            margin-right: 10px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    }
+}
+
+.footer-text{
+    font-size: 20px;
+    color:rgb(21, 170, 191);
+    font-weight: 300;
+}
+/**** footer section end  *****/
+

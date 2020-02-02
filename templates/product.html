@@ -11,21 +11,20 @@
   <div class="product-grid section group">
     {% for item in product %}
     <div class="col one_of_four card productItem">
+      <h3>Collected from <strong> {{item.uploaded_from}}</strong></h3>
       <span>{{item.name}}</span>
-      <img class="productImg" src="../../..{{item.image.url}}" >
+      <img class="productImg" data-zoom-image="../../..{{item.image.url}}" src="../../..{{item.image.url}}" >
        
       <span>Previous <del> 11545</del></span>
       <span>Price {{item.price}}</span>
       <div class="grid-btn group section">
-        <div class="col one_of_two"><button class="add-to-bag" data-id="{{item.id}}"><i class="fas fa-cart-plus"></i>Bag</button></div>  
-       <a href="#">  <div class="col one_of_two"><button><i class="fas fa-list"></i>Details</button></div> </a>
+        <div class="col one_of_two"><a href="{% url 'buyproduct' item.category item.id %}"><button class="add-to-bag" data-id="{{item.id}}"><i class="fas fa-cart-plus"></i>Buy</button></a></div>  
+         <div class="col one_of_two"><a href="{% url 'product_details' item.category item.id %}"> <button><i class="fas fa-list"></i>Details</button></a></div>  
       </div>
       
     </div>
  
     {% endfor %}
- 
- 
 
   </div>
 </div>

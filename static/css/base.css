@@ -50,6 +50,9 @@ ul {
 
 /* end general   */
 /* nav and search bar*/
+.messages {
+  font-size: 1.6rem; }
+
 .navbarAndSearch {
   font-family: 'Source Sans Pro', sans-serif;
   position: relative;
@@ -288,87 +291,81 @@ ul {
   color: #fff; }
 
 /* end navbar and searchbar */
-.footer {
-  background: #ce493a;
-  height: 50px;
-  text-align: center;
-  font-size: 2em;
-  color: #fff; }
+/**** footer section start  *****/
+.footer-section {
+  width: 100%;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 50px; }
 
-/*********** Cart-section Css *************/
-.cart-section {
-  position: fixed;
-  overflow: scroll;
-  bottom: 10%;
-  right: 1%;
-  height: 400px;
-  width: 300px;
-  background: rgba(250, 108, 81, 0.8);
-  z-index: 20;
-  border-radius: 5px; }
-  .cart-section .item {
+.company-description {
+  text-align: center; }
+  .company-description span {
+    display: inline-block; }
+  .company-description h1 {
+    font-size: 50px;
+    font-weight: 300; }
+  .company-description h3 {
+    font-size: 18px;
+    font-weight: 500; }
+  .company-description .company-logo {
+    color: #f85039; }
+
+.services, .developer {
+  margin-top: 50px; }
+
+.developer {
+  box-sizing: border-box;
+  padding: 10px; }
+  .developer .top-background img {
+    height: 100px;
+    width: 100%; }
+  .developer .developer-img img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #333333;
+    border-radius: 50%;
+    margin-left: 25%;
+    margin-top: -20%; }
+  .developer .developer-title span {
+    font-size: 16px; }
+  .developer .developer-title .developer-name {
+    color: #f85039; }
+  .developer .social-icons {
     position: relative;
-    overflow: hidden;
-    width: 95%;
-    margin-left: 3%;
-    height: 50px;
-    border-radius: 5px;
-    background: rgba(70, 207, 84, 0.8);
-    margin-top: 3px; }
-    .cart-section .item h4 {
-      font-size: 20px; }
-    .cart-section .item span {
+    display: block;
+    margin-left: 30%; }
+    .developer .social-icons a {
       display: inline-block;
-      margin-top: -10px;
-      font-size: 12px; }
-    .cart-section .item input {
-      margin-top: 5px; }
-    .cart-section .item .remove-btn {
-      padding: 8px 10px;
-      margin-top: 5px;
-      font-size: 15px;
-      border: none; }
-      .cart-section .item .remove-btn i {
-        margin-right: 3px; }
-    .cart-section .item .remove-btn:hover i {
-      transform: rotate(360deg);
-      transition: ease 0.5s; }
-    .cart-section .item .remove-btn:hover {
-      background-color: #fa6047;
-      color: #fff; }
+      color: #15aabf;
+      text-decoration: none;
+      padding: 10px;
+      margin: 10px 5px;
+      font-size: 16px;
+      border-radius: 50%; }
+    .developer .social-icons a:hover {
+      padding: 11px; }
 
-.cart-button {
-  position: fixed;
-  bottom: 1%;
-  right: 1%;
-  width: 180px;
-  height: 45px;
-  z-index: 50;
-  background: rgba(250, 108, 81, 0.6);
-  border-radius: 5px;
-  z-index: 100; }
-  .cart-button .one_of_two {
-    width: 49.2%;
-    float: left;
-    margin-left: 0; }
-  .cart-button .bag-btn, .cart-button .clearBag-bag {
-    width: 100%;
-    border: none;
-    margin-top: 5px;
-    height: 35px;
-    font-size: 16px;
-    color: #222; }
-  .cart-button .clearBag-bag i {
-    color: #ee2128; }
-  .cart-button .bag-btn i {
-    color: #4caf50; }
-  .cart-button .bag-btn:hover, .cart-button .clearBag-bag:hover {
-    background: #fff;
-    color: #fa6c51; }
-    .cart-button .bag-btn:hover i, .cart-button .clearBag-bag:hover i {
-      transform: rotate(360deg);
-      transition: ease 0.5s; }
+.services {
+  text-align: center; }
+  .services h3 {
+    color: rgba(248, 80, 57, 0.8);
+    font-weight: 400; }
+  .services li {
+    display: block;
+    padding: 5px 8px;
+    font-size: 20px;
+    color: #15aabf; }
+    .services li i {
+      margin-right: 10px;
+      margin-top: 10px;
+      display: inline-block; }
 
-/*********** End Cart-section Css *************/
+.footer-text {
+  font-size: 20px;
+  color: #15aabf;
+  font-weight: 300; }
+
+/**** footer section end  *****/
 
 /*# sourceMappingURL=base.css.map */

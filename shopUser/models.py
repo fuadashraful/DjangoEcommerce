@@ -95,3 +95,25 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user
+    
+class Order(models.Model):
+    PAYMENT_CHOICES=(
+        ('B','Bkash'),
+        ('R','Rocket'),
+        ('N','Nogod'),
+        ('U','Upay'),
+    )
+    ordered_by=models.IntegerField(default=0)
+    product_id=models.IntegerField(default=0)
+    location=models.CharField(max_length=200,null=False)
+    contact=models.CharField(max_length=20,null=False,default='+8801')
+    payment_method=models.CharField(max_length=1, choices=PAYMENT_CHOICES)
+    transection_no=models.CharField(max_length=200)
+    price=models.IntegerField(default=0)
+    
+
+    def __str__(self):
+        return "paid_by "+self.payment_method
+
+    def save(self,*args,**kwargs):
+        super(Order,self).save(*args,**kwargs)
