@@ -15,7 +15,7 @@
       <span>{{item.name}}</span>
       <img class="productImg" data-zoom-image="../../..{{item.image.url}}" src="../../..{{item.image.url}}" >
        
-      <span>Previous <del> 11545</del></span>
+      <span>Previous <del> {{item.discount_price}}</del></span>
       <span>Price {{item.price}}</span>
       <div class="grid-btn group section">
         <div class="col one_of_two"><a href="{% url 'buyproduct' item.category item.id %}"><button class="add-to-bag" data-id="{{item.id}}"><i class="fas fa-cart-plus"></i>Buy</button></a></div>  

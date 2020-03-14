@@ -5,7 +5,7 @@ from django.conf import settings
 from django.conf.urls.static import static 
 urlpatterns = [
     #default url is 'sodai/'
-    path('home/',userViews.HomeView,name="home") ,
+    path('',userViews.HomeView,name="home") ,
     path('signup/',userViews.SignUp,name="signup"),
     path('offers/',userViews.OfferView,name="offers"),
     path('logout/',userViews.logout,name="logout"),

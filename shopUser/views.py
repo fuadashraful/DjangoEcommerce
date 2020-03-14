@@ -146,7 +146,9 @@ def buyView(request,categoryName=None,id=None):
 def productDetailsView(request,categoryName=None,id=None):
     context={}
     product=Product.objects.get(pk=id)
+    owner=User.objects.get(pk=product.uploaded_by).username
     context['product']=product
-    return render(request,'product_details.html',context)
+    context['owner']=owner
+    return render(request,'product_description.html',context)
 
 #https://tutorial.djangogirls.org/en/django_forms/?q=

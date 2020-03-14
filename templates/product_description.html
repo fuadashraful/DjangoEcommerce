@@ -1,0 +1,55 @@
+{% extends 'base.html'%}
+{% load static %}
+{%block CSS %}
+<link rel="stylesheet" href="{% static 'css/product_description.css'%}">
+{% endblock CSS%}
+
+{% block content %}
+
+    <div class="container">
+        <div class="product-details">
+            <h3 class="text-center">{{product.name}}</h3>
+        </div> 
+        
+        
+        <div class="row">
+            <div class="col-md-6 mt-2">
+                <img class="img-thumbnail productImg" alt="Product Image" data-zoom-image="../../..{{product.image.url}}" src="../../..{{product.image.url}}" >       
+            </div>
+
+            <div class="col-md-6 mt-2 text-center">
+
+                <div class="product-info">
+                    <li>Collected From <strong>{{product.uploaded_from}}</strong></li>
+                    <li>Owner of Product <strong>{{owner}}</strong></li>
+                    
+                    <div class="price">
+                        <h4>Price : <small>{{product.price}} BDT</small></h4>
+                        <h4>Discount : <del>{{product.price}} BDT</del></h4>
+                    </div>
+
+                    <div class="description">
+                        <h3>Description</h3>
+                        <p>{{product.description}}</p>
+                    </div>
+
+
+
+                    <div class="buy-button">
+                        <a id="buy-btn" href="{% url 'buyproduct' product.category product.id %}"><button class="add-to-bag" data-id="{{product.id}}"><i class="fas fa-cart-plus"></i>Buy</button></a> 
+                    </div>
+
+                </div>
+                      
+               
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+{%block JS %}
+<script src="{% static 'js/product.js' %}"></script>
+{% endblock JS%}
